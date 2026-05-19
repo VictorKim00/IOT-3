@@ -1,0 +1,31 @@
+- id: hw5_led23_demo
+  alias: "HW5 LED23 demo automation"
+  description: "When the helper is turned on, LED23 turns on for 2 seconds and then turns off."
+  trigger:
+    - platform: state
+      entity_id: input_boolean.hw5_led23_demo
+      to: "on"
+  action:
+    - service: rest_command.led23_on
+    - delay: "00:00:02"
+    - service: rest_command.led23_off
+    - service: input_boolean.turn_off
+      target:
+        entity_id: input_boolean.hw5_led23_demo
+  mode: single
+
+- id: hw5_led24_demo
+  alias: "HW5 LED24 demo automation"
+  description: "When the helper is turned on, LED24 turns on for 2 seconds and then turns off."
+  trigger:
+    - platform: state
+      entity_id: input_boolean.hw5_led24_demo
+      to: "on"
+  action:
+    - service: rest_command.led24_on
+    - delay: "00:00:02"
+    - service: rest_command.led24_off
+    - service: input_boolean.turn_off
+      target:
+        entity_id: input_boolean.hw5_led24_demo
+  mode: single
