@@ -1,0 +1,21 @@
+input_boolean:
+  hw5_led23_demo:
+    name: HW5 LED 23 Demo
+    icon: mdi:led-on
+  hw5_led24_demo:
+    name: HW5 LED 24 Demo
+    icon: mdi:led-on
+
+rest_command:
+  led23_on:
+    url: "http://127.0.0.1:5000/api/led/23/on"
+    method: get
+  led23_off:
+    url: "http://127.0.0.1:5000/api/led/23/off"
+    method: get
+  led24_on:
+    url: "http://127.0.0.1:5000/api/led/24/on"
+    method: get
+  led24_off:
+    url: "http://127.0.0.1:5000/api/led/24/off"
+    method: get
